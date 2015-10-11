@@ -11,6 +11,7 @@
         var vm = this;
 
         vm.animals = [];
+        vm.addLike = addLike;
 
         activate();
 
@@ -20,6 +21,11 @@
                     vm.animals = animals;
                 });
         }
+
+        function addLike(animal) {
+            animal.likes += 1;
+        }
+
     }
 
 })();
