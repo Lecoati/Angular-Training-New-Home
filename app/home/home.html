@@ -1,23 +1,23 @@
 <div class="row">
-    <div class="col s12 m4">
+    <div class="col s12 m4" ng-repeat="animal in home.animals">
         <div class="card">
             <div class="card-image">
-                <img src="http://lorempixel.com/1024/768/">
+                <img ng-src="{{animal.photo}}">
             </div>
             <div class="card-content">
-                <a href="#" class="card-title">Nombre</a>
+                <a ng-href="#/animals/{{animal.id}}" class="card-title">{{animal.name}}</a>
                 <p>
-                    Descripción
+                    {{animal.description}}
                 </p>
             </div>
             <div class="card-action">
                 <div class="card-details">
                     <i class="small material-icons card-details__likes" title="Likes">favorite</i>
-                    <span class="card-details__text">0</span>
+                    <span class="card-details__text">{{animal.likes}}</span>
                 </div>
                 <div class="card-details">
                     <i class="small material-icons card-details__comments" title="Comentarios">chat</i>
-                    <span class="card-details__text">0</span>
+                    <span class="card-details__text">{{animal.commentsCount}}</span>
                 </div>
             </div>
         </div>
