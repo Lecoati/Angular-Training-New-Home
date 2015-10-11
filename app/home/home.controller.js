@@ -15,7 +15,10 @@
         activate();
 
         function activate() {
-            vm.animals = animalsService.getAll();
+            animalsService.getAll()
+                .then(function(animals) {
+                    vm.animals = animals;
+                });
         }
     }
 
