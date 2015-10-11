@@ -3,7 +3,8 @@
 
     angular
         .module('newHome', [
-            'newHome.core'
+            'newHome.core',
+            'newHome.home'
         ]);
 
 })();
