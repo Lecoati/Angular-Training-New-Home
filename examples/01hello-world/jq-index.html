@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Hola mundo jQuery</title>
+</head>
+<body>
+    Name: <input id="name" type="text">
+    <h1 id="greeting"></h1>
+
+    <script type="text/javascript" src="../vendor/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).on('ready', function() {
+            var $name = $('#name');
+            var $greeting = $('#greeting');
+
+            $name.on('keyup', function() {
+                var value = $name.val();
+
+                if (!value) {
+                    $greeting.hide();
+                } else {
+                    $greeting.text('¡Hola, ' + $name.val() + '!');
+                    $greeting.show();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
