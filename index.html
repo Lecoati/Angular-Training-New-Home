@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" ng-app="newHome">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -24,6 +24,8 @@
             </div>
         </nav>
 
+        <div class="container" ng-view></div>
+
         <footer class="page-footer orange">
             <div class="footer-copyright">
                 <div class="container">
@@ -33,6 +35,8 @@
         </footer>
 
         <script type="text/javascript" src="../vendor/angular/angular.js"></script>
+        <script type="text/javascript" src="app/newhome.module.js"></script>
+        <script type="text/javascript" src="app/core/core.module.js"></script>
     </body>
 </html>
 
