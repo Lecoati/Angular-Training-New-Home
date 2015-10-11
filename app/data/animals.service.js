@@ -5,14 +5,18 @@
         .module('newHome.data')
         .factory('animalsService', animalsService);
 
-    function animalsService() {
+    animalsService.$inject = ['$q'];
+
+    function animalsService($q) {
         var service = {
             getAll: getAll,
         };
         return service;
 
         function getAll() {
-            return [{
+            var deferred = $q.defer();
+
+            deferred.resolve([{
                 id: 1,
                 photo: 'http://lorempixel.com/1024/600/cats/1',
                 name: 'Baco',
@@ -35,7 +39,9 @@
                 description: 'lorem ipsum dolor sit amet',
                 likes: 9,
                 commentsCount: 1
-            }];
+            }]);
+
+            return deferred.promise;
         }
 
     }
