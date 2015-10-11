@@ -4,7 +4,8 @@
     angular
         .module('newHome', [
             'newHome.core',
-            'newHome.home'
+            'newHome.home',
+            'newHome.animals'
         ]);
 
 })();
