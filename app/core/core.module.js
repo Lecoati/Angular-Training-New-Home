@@ -3,7 +3,8 @@
 
     angular
         .module('newHome.core', [
-            'ngRoute'
+            'ngRoute',
+            'newHome.data'
         ]);
 
 })();
