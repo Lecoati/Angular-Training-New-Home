@@ -23,7 +23,10 @@
         }
 
         function addLike(animal) {
-            animal.likes += 1;
+            animalsService.addLike(animal)
+                .then(function() {
+                    animal.likes += 1;
+                });
         }
 
     }
