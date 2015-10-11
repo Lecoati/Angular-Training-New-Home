@@ -10,6 +10,7 @@
     function animalsService($http, API_ENDPOINT) {
         var service = {
             getAll: getAll,
+            addLike: addLike
         };
         return service;
 
@@ -18,6 +19,10 @@
                 .then(function(response) {
                     return response.data;
                 });
+        }
+
+        function addLike(animal) {
+            return $http.put(API_ENDPOINT + animal.id + '/likes');
         }
 
     }
