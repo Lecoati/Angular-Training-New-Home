@@ -3,7 +3,7 @@
 
     angular
         .module('newHome.data')
-        .constant('API_ENDPOINT', 'http://api.newhome.local/api/animals/');
+        .constant('API_ENDPOINT', 'http://angular-animals.azurewebsites.net/api/animals/');
 
 })();
 
