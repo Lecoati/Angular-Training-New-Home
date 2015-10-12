@@ -19,8 +19,20 @@
         return directive;
     }
 
-    function AnimalCardController() {
+    AnimalCardController.$inject = ['animalsService'];
+
+    function AnimalCardController(animalsService) {
         var vm = this;
+
+        vm.addLike = addLike;
+
+        function addLike() {
+            animalsService.addLike(vm.animal)
+                .then(function() {
+                    vm.animal.likes += 1;
+                });
+        }
+
     }
 
 })();
