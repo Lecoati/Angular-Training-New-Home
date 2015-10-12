@@ -10,7 +10,8 @@
     </div>
     <div class="card-action">
         <div class="card-details">
-            <i class="small material-icons card-details__likes" title="Likes">favorite</i>
+            <i class="small material-icons card-details__likes"
+                ng-click="card.addLike()" title="Likes">favorite</i>
             <span class="card-details__text">{{card.animal.likes}}</span>
         </div>
         <div class="card-details">

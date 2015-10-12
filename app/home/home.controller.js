@@ -11,7 +11,6 @@
         var vm = this;
 
         vm.animals = [];
-        vm.addLike = addLike;
 
         activate();
 
@@ -19,13 +18,6 @@
             animalsService.getAll()
                 .then(function(animals) {
                     vm.animals = animals;
-                });
-        }
-
-        function addLike(animal) {
-            animalsService.addLike(animal)
-                .then(function() {
-                    animal.likes += 1;
                 });
         }
 
