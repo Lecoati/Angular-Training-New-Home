@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col s12 m5">
+        <nwh-animal-card
+            animal="vm.animal"
+            show-content="vm.showCardContent"></nwh-animal-card>
+    </div>
+    <div class="col s12 m7">
+        <h3 class="animal-details-name">{{vm.animal.name}}</h3>
+        <span><strong>Sexo:</strong> {{vm.animal.gender | gender}}</span>
+        <p>{{vm.animal.description}}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 m12">
+        <h5>Comentarios</h5>
+    </div>
+
+    <div class="col s12" ng-show="!vm.animal.comments.length">
+        <div class="card-panel yellow">
+            <span>¡Se el primero en comentar!</span>
+        </div>
+    </div>
+
+    <div class="col s12 m3" ng-repeat="comment in vm.animal.comments">
+        <blockquote class="comment">
+            <p class="comment-author">
+                <i class="tiny material-icons comment-author__icon">chat</i>
+                <span class="comment-author__name">{{comment.author}}</span>
+            <p>
+            {{comment.text}}
+        </blockquote>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12">
+        <h5>Deja un comentario</h5>
+    </div>
+    <form class="col s12" name="commentForm" ng-submit="vm.addComment(commentForm)" novalidate>
+        <div class="row">
+            <div class="input-field col s6">
+                <label for="name">Nombre</label>
+                <input placeholder="John Doe" id="name" name="name" type="text" ng-model="vm.comment.author" required>
+                <div ng-show="commentForm.$submitted || commentForm.name.$touched">
+                    <div ng-show="commentForm.name.$error.required">Introduce tu nombre.</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <label for="text">Comentario</label>
+                <textarea id="text" class="materialize-textarea" ng-model="vm.comment.text"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <button type="submit" class="btn-large" ng-disable="vm.isSaving">Enviar</button>
+            </div>
+        </div>
+    </form>
+</div>
+

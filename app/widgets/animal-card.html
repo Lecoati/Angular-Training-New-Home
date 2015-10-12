@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="card-image">
+        <img ng-src="{{card.animal.photos}}">
+    </div>
+    <div class="card-content" ng-show="card.showContent">
+        <a ng-href="#/{{card.animal.typeUrl}}/{{card.animal.id}}" class="card-title">{{card.animal.name}}</a>
+        <p>
+            {{card.animal.description | limitTo:80}}
+        </p>
+    </div>
+    <div class="card-action">
+        <div class="card-details">
+            <i class="small material-icons card-details__likes"
+                ng-class="{'card-details__likes--female': card.animal.isFemale,
+                           'card-details__likes--male': card.animal.isMale}"
+                ng-click="card.addLike()" title="Likes">favorite</i>
+            <span class="card-details__text">{{card.animal.likes}}</span>
+        </div>
+        <div class="card-details">
+            <i class="small material-icons card-details__comments" title="Comentarios">chat</i>
+            <span class="card-details__text">{{card.animal.commentsCount}}</span>
+        </div>
+    </div>
+</div>
