@@ -11,6 +11,7 @@
         var vm = this;
 
         vm.animals = [];
+        vm.showCardsContent = true;
 
         activate();
 

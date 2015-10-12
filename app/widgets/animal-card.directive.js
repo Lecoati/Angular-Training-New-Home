@@ -12,7 +12,8 @@
             controller: AnimalCardController,
             controllerAs: 'card',
             bindToController: {
-                animal: '='
+                animal: '=',
+                showContent: '='
             },
             scope: {}
         };

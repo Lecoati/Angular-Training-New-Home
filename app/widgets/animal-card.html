@@ -2,7 +2,7 @@
     <div class="card-image">
         <img ng-src="{{card.animal.photos}}">
     </div>
-    <div class="card-content">
+    <div class="card-content" ng-show="card.showContent">
         <a ng-href="#/animales/{{card.animal.id}}" class="card-title">{{card.animal.name}}</a>
         <p>
             {{card.animal.description | limitTo:80}}

@@ -11,6 +11,7 @@
         var vm = this;
 
         vm.details = {};
+        vm.showCardContent = false;
 
         activate();
 
