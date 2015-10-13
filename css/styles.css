@@ -1,0 +1,59 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.card .card-content .card-title {
+    color: #333;
+    text-decoration: underline;
+}
+
+.card .card-action .card-details {
+    display: inline-block;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.card .card-action .card-details .card-details__likes {
+    cursor: pointer;
+}
+
+.card .card-action .card-details .card-details__likes--female {
+    color: #f48fb1 ;
+}
+
+.card .card-action .card-details .card-details__likes--male {
+    color: #90caf9 ;
+}
+
+.card .card-action .card-details .card-details__comments {
+    color: #a5d6a7;
+}
+
+.card .card-action .card-details .card-details__text {
+    font-size: 1.2rem;
+    vertical-align: top;
+}
+
+.animal-details-name {
+    margin-bottom: 0;
+}
+
+.comment .comment-author .comment-author__icon {
+    color: #a5d6a7;
+    vertical-align: middle;
+}
+
+.comment .comment-author .comment-author__name {
+    font-weight: bold;
+}
