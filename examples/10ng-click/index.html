@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <title>Ejemplo de ng-click</title>
+    </head>
+    <body>
+
+        <div ng-controller="TestController as test">
+            <p>{{test.counter}}</p>
+            <button ng-click="test.increment()">Incrementar</button>
+        </div>
+
+        <script type="text/javascript" src="../vendor/angular.js"></script>
+        <script type="text/javascript" src="app.module.js"></script>
+        <script type="text/javascript" src="test.controller.js"></script>
+    </body>
+</html>
+
