@@ -21,7 +21,6 @@
             animalsService.getByType(animalType)
                 .then(function(animals) {
                     vm.animals = animals;
-                    console.log(vm.animals);
                     return vm.animals;
                 });
         }
