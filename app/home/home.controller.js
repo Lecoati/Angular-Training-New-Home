@@ -24,6 +24,7 @@
                     return vm.animals;
                 });
         }
+
     }
 })();
 
