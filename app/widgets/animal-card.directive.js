@@ -3,7 +3,8 @@
 
     angular
         .module('newHome.widgets')
-        .directive('nwhAnimalCard', nwhAnimalCard);
+        .directive('nwhAnimalCard', nwhAnimalCard)
+        .controller('AnimalCardController', AnimalCardController);
 
     function nwhAnimalCard() {
         var directive = {
