@@ -10,7 +10,7 @@
     function routeConfig($routeProvider) {
         $routeProvider.otherwise({ redirectTo: '/' });
         $routeProvider.when('/', {
-            templateUrl: 'home.html',
+            templateUrl: 'home/home.html',
             controller: 'HomeController',
             controllerAs: 'home'
         });
